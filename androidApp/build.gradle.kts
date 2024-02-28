@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
+    alias(libs.plugins.hilt)
+    alias(libs.plugins.kapt)
 }
 
 android {
@@ -15,6 +17,13 @@ android {
     }
     buildFeatures {
         compose = true
+    }
+    compileOptions{
+        isCoreLibraryDesugaringEnabled = true
+    }
+
+    kapt {
+        correctErrorTypes = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = libs.versions.compose.compiler.get()
@@ -44,5 +53,13 @@ dependencies {
     implementation(libs.compose.ui.tooling.preview)
     implementation(libs.compose.material3)
     implementation(libs.androidx.activity.compose)
+    implementation(libs.dagger.hilt)
+    implementation(libs.kotlinx.datetime)
+    //TODO replace with version catalog
+    implementation("com.google.dagger:hilt-android:2.44")
+    kapt("com.google.dagger:hilt-android-compiler:2.44")
+    kapt("androidx.hilt:hilt-compiler:1.0.0")
+    implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:1.1.5")
     debugImplementation(libs.compose.ui.tooling)
 }
