@@ -56,10 +56,10 @@ dependencies {
     implementation(libs.dagger.hilt)
     implementation(libs.kotlinx.datetime)
     //TODO replace with version catalog
-    implementation("com.google.dagger:hilt-android:2.44")
+    implementation("com.google.dagger:hilt-android:2.49")
     kapt("com.google.dagger:hilt-android-compiler:2.44")
-    kapt("androidx.hilt:hilt-compiler:1.0.0")
-    implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
-    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:1.1.5")
+    kapt("androidx.hilt:hilt-compiler:1.2.0")
+    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")
     debugImplementation(libs.compose.ui.tooling)
 }

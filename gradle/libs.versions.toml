@@ -5,11 +5,8 @@ compose = "1.5.4"
 compose-compiler = "1.5.4"
 compose-material3 = "1.1.2"
 androidx-activityCompose = "1.8.0"
-sql-delight-runtime= "1.5.3"
-sql-delight = "1.5.3"
 kotlinx-datetime = "0.4.0"
-sqldelight-android-driver = "1.5.3"
-sqldelight-native-driver = "1.5.3"
+sqldelight = "2.0.0"
 hilt = "2.44"
 
 
@@ -21,9 +18,9 @@ compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = 
 compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
 compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
 compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "compose-material3" }
-sql-delight-runtime = {module = "com.squareup.sqldelight:runtime", version.ref = "sql-delight-runtime"}
-sql-delight-android-driver = {module = "com.squareup.sqldelight:android-driver",version.ref = "sqldelight-android-driver"}
-sql-delight-native-driver = {module = "com.squareup.sqldelight:native-driver", version.ref = "sqldelight-native-driver"}
+sql-delight-runtime = {module = "app.cash.sqldelight:runtime", version.ref = "sqldelight"}
+sql-delight-android-driver = {module = "app.cash.sqldelight:android-driver",version.ref = "sqldelight"}
+sql-delight-native-driver = {module = "app.cash.sqldelight:native-driver", version.ref = "sqldelight"}
 kotlinx-datetime = {module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime"}
 dagger-hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 dagger-hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
@@ -35,6 +32,6 @@ androidLibrary = { id = "com.android.library", version.ref = "agp" }
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kotlinCocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin" }
-sqldelight = {id = "com.squareup.sqldelight", version.ref = "sql-delight"}
+sqldelight = {id = "app.cash.sqldelight", version.ref = "sqldelight"}
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }

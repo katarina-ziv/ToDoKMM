@@ -41,6 +41,13 @@ kotlin {
         }
     }
 }
+sqldelight{
+    databases{
+        create("TodoDatabase"){
+            packageName.set("com.example.todo.database")
+        }
+    }
+}
 
 android {
     namespace = "com.example.todo"
