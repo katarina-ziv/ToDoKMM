@@ -2,6 +2,7 @@ CREATE TABLE taskEntity(
 id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
 title TEXT NOT NULL,
 content TEXT NOT NULL,
+isDone INTEGER DEFAULT 0 NOT NULL,
 colorHex INTEGER NOT NULL,
 created INTEGER NOT NULL
 );
@@ -9,6 +10,14 @@ created INTEGER NOT NULL
 getAllTasks:
 SELECT *
 FROM taskEntity;
+
+getDoneTasks:
+SELECT *
+FROM taskEntity
+WHERE isDone = 1;
+
+updateComplete:
+UPDATE taskEntity SET isDone = ? WHERE id = ?;
 
 getTaskById:
 SELECT *
