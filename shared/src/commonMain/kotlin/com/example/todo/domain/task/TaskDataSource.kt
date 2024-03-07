@@ -9,5 +9,6 @@ interface TaskDataSource {
 
     suspend fun deleteTaskById(id: Long)
 
-    suspend fun updateComplete(isComplete : Boolean)
+    suspend fun updateComplete(isComplete : Boolean,id: Long)
+    suspend fun getDoneTasks() : List<Task>
 }
